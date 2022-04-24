@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .dialog-bg {
+            background-color: rgba(0, 0, 0, 0.2);
+            z-index: 999;
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            top: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .dialog {
+            width: 50vw;
+            height: 50vh;
+            background-color: #fff;
+            border-radius: 25px;
+            border: 1px solid lightgray;
+            padding: 30px;
+        }
+        
+        .d-none {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="dialog-bg d-none" id="dialog" onclick="closedialog()">
+        <div class="dialog ">
+            <h1>Dialog</h1>
+            <p id="info">Informationen</p>
+        </div>
+    </div>
+
+    <div id="open">
+        <h1>Überschrift</h1>
+        <p></p>
+        <button onclick="opendialog('hallo, wie geht es Ihnen')">Dialog ändern</button>
+        <button onclick="opendialog('hi bruder')">Dialog ändern</button>
+        <button onclick="opendialog('assalamu aleykum ')">Dialog ändern</button>
+    </div>
+
+
+    <script>
+        function opendialog(text) {
+            document.getElementById('dialog').classList.remove('d-none')
+            document.getElementById('info').innerHTML = text
+        }
+
+        function closedialog() {
+            document.getElementById('dialog').classList.add('d-none')
+        }
+    </script>
+</body>
+
+</html>

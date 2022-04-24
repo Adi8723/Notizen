@@ -1,8 +1,45 @@
-.card {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    box-shadow: 0 2px 2px 2px rgb(0 0 0 / 14%);
-    padding: 8px;
-    margin-bottom: 8px;
-}
+    body {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+    
+    .nav {
+        text-align: center;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 100px;
+        background-color: #333;
+        color: #fff;
+        padding: 10px 100px 30px;
+    }
+    
+    input {
+        margin-left: 0;
+        margin-right: 0;
+        border-radius: 15px;
+        padding: 5px;
+        width: 200px;
+    }
+    
+    button {
+        padding: 5px;
+        border-radius: 5px;
+        font-weight: 700;
+        margin-left: 100px;
+    }
+    
+    .card {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        box-shadow: 0 2px 2px 2px rgb(0 0 0 / 14%);
+        padding: 8px 200px;
+        margin-bottom: 8px;
+    }
+    
+    #content {
+        margin-top: 140px;
+    }

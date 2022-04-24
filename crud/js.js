@@ -7,23 +7,19 @@ load()
 function render() {
     let content = document.getElementById('content');
     content.innerHTML = '';
-    content.innerHTML += `<h1>My contact</h1>`
-    content.innerHTML += ` <input type="text" placeholder="Name" id="name">
-    						<input type="number" placeholder="Phone-number" id="number">
-    						<button onclick="Add()">Add Contact</button>`
+    content.innerHTML += ` 
+	<div class="nav">
+		<h1 >My contact</h1>
+		<input type="text" placeholder="Name" id="name">
+    	<input type="number" placeholder="Phone-number" id="number">
+    	<button onclick="Add()">Add Contact</button>
+	</div>`
     for (let i = 0; i < names.length; i++) {
         const name = names[i];
         const phone = phoneNumbers[i];
-        if (name === '') {
-            alert('bitte fügen Sie name ein')
-        }
-        if (number == '') {
-            alert('bitte fügen Sie nummer ein')
-        } else {
-
-            content.innerHTML += `
+        content.innerHTML += `
 			<div class="card">
-			<div>
+				<div>
 					 <b>Name: </b>${name} <br> 
 					<b> PhoneNumber: </b> ${phone} <br>
 				</div>
@@ -33,7 +29,6 @@ function render() {
 				</div>
 			 
 		</div>`
-        }
 
     }
 }
